@@ -1,44 +1,49 @@
-import React from 'React';
-import { TextInput, View, Text } from 'react-native';
+import React from "React";
+import { TextInput, View, Text } from "react-native";
 
-const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
-
-	const {inputStyle, labelStyle, containerStyle} = styles;
+const Input = ({
+	label,
+	value,
+	onChangeText,
+	placeholder,
+	secureTextEntry
+}) => {
+	const { inputStyle, labelStyle, containerStyle } = styles;
 	return (
-			<View style={containerStyle}>
+		<View style={containerStyle}>
 			<Text style={labelStyle}>{label}</Text>
 			<TextInput
-			secureTextEntry={secureTextEntry}
-			placeholder={placeholder}
-			autoCorrect={false}
-			style={inputStyle}
-			value={value}
-			onChangeText={onChangeText}
+				secureTextEntry={secureTextEntry}
+				placeholder={placeholder}
+				autoCorrect={false}
+				style={inputStyle}
+				value={value}
+				onChangeText={onChangeText}
 			/>
-			</View>
-		);
+		</View>
+	);
 };
 
-const styles={
+const styles = {
 	inputStyle: {
-		color: '#000',
+		color: "#000",
 		paddingLeft: 5,
 		paddingRight: 5,
 		fontSize: 20,
 		lineHeight: 25,
-		flex:1
+		flex: 1
 	},
 	labelStyle: {
-		fontSize: 20,
+		fontSize: 17,
 		paddingLeft: 20,
-		flex:1
+		flex: 1
 	},
 	containerStyle: {
 		height: 40,
-		flex:1,
-		flexDirection: 'row',
-		alignItems: 'center'
-	},
-}
+		flex: 1,
+		flexDirection: "row",
+		alignItems: "center"
+	}
+};
 
-export{ Input }
+export { Input };
