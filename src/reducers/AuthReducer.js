@@ -6,7 +6,7 @@ import {
 
 const INITIAL_STATE = {
 	email: "",
-	passowrd: ""
+	passowrd: "",
 	user: null
 };
 
