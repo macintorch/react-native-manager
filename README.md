@@ -14,3 +14,7 @@ $ npm install --save firebase
 5. It’s a good idea to use react-native-dotenv so you’re not pushing your live api keys for the world to see. It’s super easy to setup, just create a .env file, add it to your .gitignore file, stick all your env vars in there and import them in where ever you need them.
 
 https://github.com/zetachang/react-native-dotenv
+
+6. install redux thunk for asynchronous request
+
+$ npm install --save redux-thunk
