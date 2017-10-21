@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text } from "react-native";
-import { Card, CardSection, Input, Button } from "./common";
+import { Card, CardSection, Input, Button, Spinner } from "./common";
 import { emailChanged, passwordChanged, loginUser } from "../actions";
 import { connect } from "react-redux";
 
@@ -16,6 +16,14 @@ class LoginForm extends Component {
 	onButtonPress() {
 		const { email, password } = this.props;
 		this.props.loginUser({ email, password });
+	}
+
+	renderButton() {
+		if (this.props.loading) {
+			return <Spinner size="large" />;
+		}
+
+		return <Button diTekan={this.onButtonPress.bind(this)}>Login</Button>;
 	}
 
 	render() {
@@ -42,11 +50,7 @@ class LoginForm extends Component {
 
 				<Text style={styles.errorTextStyle}>{this.props.error}</Text>
 
-				<CardSection>
-					<Button diTekan={this.onButtonPress.bind(this)}>
-						Login
-					</Button>
-				</CardSection>
+				<CardSection>{this.renderButton()}</CardSection>
 			</Card>
 		);
 	}
@@ -61,8 +65,8 @@ const styles = {
 };
 
 const mapStateToProps = ({ auth }) => {
-	const { email, password, error } = auth;
-	return { email, password, error };
+	const { email, password, error, loading } = auth;
+	return { email, password, error, loading };
 };
 
 export default connect(mapStateToProps, {
