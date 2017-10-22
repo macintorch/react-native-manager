@@ -24,3 +24,17 @@ $ npm install --save redux-thunk
 $ npm install --save react-native-router-flux@4.0.0-beta.21
 
 8. Add "react-navigation": "git+https://github.com/react-community/react-navigation.git" in package.json
+
+9. Update firebase db rules
+
+{
+  "rules": {
+    "users": {
+      "$uid" : {
+        ".read": "$uid === auth.uid",
+          ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
+
