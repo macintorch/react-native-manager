@@ -18,3 +18,9 @@ https://github.com/zetachang/react-native-dotenv
 6. install redux thunk for asynchronous request
 
 $ npm install --save redux-thunk
+
+7. install react native router flux for navigation
+
+$ npm install --save react-native-router-flux@4.0.0-beta.21
+
+8. Add "react-navigation": "git+https://github.com/react-community/react-navigation.git" in package.json
