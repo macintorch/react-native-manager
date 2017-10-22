@@ -38,3 +38,8 @@ $ npm install --save react-native-router-flux@4.0.0-beta.21
   }
 }
 
+10. install lodash
+
+$ npm install --save lodash
+
+
