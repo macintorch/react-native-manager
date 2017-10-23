@@ -42,4 +42,7 @@ $ npm install --save react-native-router-flux@4.0.0-beta.21
 
 $ npm install --save lodash
 
+11. install react native communications to send text messages
+
+$ npm install --save react-native-communications
 
