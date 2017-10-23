@@ -26,7 +26,7 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
 	);
 };
 
-const style = {
+const styles = {
 	cardSectionStyle: {
 		justifyContent: "center"
 	},
